@@ -34,24 +34,28 @@ public class Circle {
         setRadius(radius);
     }
 
-    public double Area() {
+    public double area() {
         return Math.PI * radius * radius;
     }
 
-    public double Perimeter() {
+    public double diameter() {
+        return 2 * radius;
+    }
+
+    public double circumference() {
         return 2 * Math.PI * radius;
     }
 
     public static void main(String[] args) {
         Circle circle1 = new Circle();
         System.out.printf("The radius of circle1 is %s\n", circle1.getRadius());
-        System.out.printf("The radius of circle1 is %.5f\n", circle1.Area());
-        System.out.printf("The radius of circle1 is %.2f\n", circle1.Perimeter());
+        System.out.printf("The radius of circle1 is %.5f\n", circle1.area());
+        System.out.printf("The radius of circle1 is %.2f\n", circle1.diameter());
 
         circle1.setRadius(5);
         System.out.printf("The radius of circle1 is %s", circle1.getRadius());
-        System.out.printf("The radius of circle1 is %.5f", circle1.Area());
-        System.out.printf("The radius of circle1 is %.2f", circle1.Perimeter());
+        System.out.printf("The radius of circle1 is %.5f", circle1.area());
+        System.out.printf("The radius of circle1 is %.2f", circle1.diameter());
 
         try {
             circle1.setRadius(-25);
